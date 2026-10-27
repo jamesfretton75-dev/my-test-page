@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>James Fretton | Crest</title>
+  <meta name="description" content="James Fretton, founder of Crest. Supply chain and transformation consultant helping organisations change how they work, and making that change stick.">
+  <meta name="author" content="James Fretton">
+
+  <!-- How the page looks when shared on LinkedIn, WhatsApp and so on -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="James Fretton | Crest">
+  <meta property="og:description" content="Supply chain and transformation consultant helping organisations change how they work, and making that change stick.">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="James Fretton | Crest">
+  <meta name="twitter:description" content="Supply chain and transformation consultant helping organisations change how they work, and making that change stick.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #FAF8F3;
+      --surface: #FFFFFF;
+      --text: #2B2B2B;
+      --muted: #555149;
+      --green: #2F5D46;
+      --green-dark: #234836;
+      --green-tint: #E8EFEA;
+      --line: #E4DFD3;
+      --serif: "Playfair Display", Georgia, "Times New Roman", serif;
+      --sans: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --max: 760px;
+      --nav-h: 64px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 1.0625rem;
+      line-height: 1.7;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--serif);
+      color: var(--green);
+      line-height: 1.2;
+      margin: 0 0 0.75rem;
+    }
+    h2 { font-size: clamp(1.75rem, 4vw, 2.25rem); margin-bottom: 1.5rem; }
+    h3 { font-size: 1.25rem; }
+    p { margin: 0 0 1.1rem; }
+
+    a { color: var(--green); text-underline-offset: 3px; }
+    a:hover { color: var(--green-dark); }
+    a:focus-visible {
+      outline: 3px solid var(--green);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 1rem;
+      top: -100px;
+      background: var(--green);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      z-index: 100;
+    }
+    .skip-link:focus { top: 1rem; color: #fff; }
+
+    /* ---------- Navigation ---------- */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(250, 248, 243, 0.95);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(6px);
+    }
+    .nav-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0.9rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: var(--green);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .nav-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem 1.25rem;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text);
+      padding: 0.25rem 0;
+    }
+    .nav-links a:hover { color: var(--green); text-decoration: underline; }
+
+    /* On phones the links sit on their own row beneath the logo */
+    @media (max-width: 720px) {
+      .nav-inner { padding: 0.75rem 1rem; gap: 0.4rem; }
+      .nav-links { width: 100%; gap: 0.15rem 1rem; }
+      .nav-links a { font-size: 0.9rem; }
+    }
+
+    /* ---------- Layout ---------- */
+    main { padding: 0 1.25rem; }
+    section {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 4.5rem 0;
+      border-bottom: 1px solid var(--line);
+      scroll-margin-top: 80px;
+    }
+    section:last-of-type { border-bottom: none; }
+    .wide { max-width: 960px; }
+
+    @media (max-width: 720px) {
+      section { padding: 3.25rem 0; scroll-margin-top: 110px; }
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      text-align: center;
+      padding-top: 5rem;
+    }
+    .photo-frame {
+      width: 168px;
+      height: 168px;
+      margin: 0 auto 1.75rem;
+      border-radius: 50%;
+      overflow: hidden;
+      background: var(--green-tint);
+      border: 4px solid var(--surface);
+      box-shadow: 0 0 0 1px var(--line), 0 6px 20px rgba(43, 43, 43, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .photo-initials {
+      font-family: var(--serif);
+      font-size: 3.25rem;
+      font-weight: 700;
+      color: var(--green);
+    }
+    .hero h1 {
+      font-size: clamp(2.4rem, 7vw, 3.6rem);
+      margin-bottom: 0.75rem;
+    }
+    .hero .role {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+    .hero .tagline {
+      font-family: var(--serif);
+      font-size: clamp(1.25rem, 3.2vw, 1.6rem);
+      line-height: 1.45;
+      color: var(--text);
+      max-width: 34ch;
+      margin: 0 auto 2.25rem;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--green);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.85rem 1.6rem;
+      border-radius: 8px;
+      transition: background 0.2s ease;
+    }
+    .button:hover { background: var(--green-dark); color: #fff; }
+
+    /* ---------- Cards ---------- */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-top: 4px solid var(--green);
+      border-radius: 10px;
+      padding: 1.5rem 1.5rem 1.25rem;
+    }
+    .card p { margin: 0; color: var(--text); }
+
+    @media (max-width: 600px) {
+      .cards { grid-template-columns: 1fr; }
+    }
+
+    /* ---------- Results ---------- */
+    .results {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem 2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .results li { border-left: 3px solid var(--green-tint); padding-left: 1.25rem; }
+    .stat {
+      display: block;
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: clamp(2.6rem, 7vw, 3.4rem);
+      line-height: 1.05;
+      color: var(--green);
+      font-variant-numeric: lining-nums;
+      margin-bottom: 0.4rem;
+    }
+    .stat.word { font-size: clamp(1.9rem, 5vw, 2.4rem); line-height: 1.4; }
+
+    @media (max-width: 600px) {
+      .results { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
+    /* ---------- Timeline ---------- */
+    .timeline {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 0.6rem;
+      bottom: 0.6rem;
+      width: 2px;
+      background: var(--line);
+    }
+    .timeline li {
+      position: relative;
+      padding: 0 0 1.75rem 2.25rem;
+    }
+    .timeline li:last-child { padding-bottom: 0; }
+    .timeline li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.45rem;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 3px solid var(--green);
+    }
+    .timeline .when {
+      display: block;
+      font-weight: 600;
+      color: var(--green);
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+    }
+    .timeline .what { display: block; }
+
+    /* ---------- Contact ---------- */
+    .contact { text-align: center; }
+
+    /* ---------- Footer ---------- */
+    footer {
+      text-align: center;
+      padding: 2rem 1.25rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+    }
+    footer p { margin: 0; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-nav">
+    <nav class="nav-inner" aria-label="Main">
+      <a class="logo" href="#top" aria-label="Crest – back to top">Crest</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#help">Services</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#career">Career</a></li>
+        <li><a href="#beyond">Beyond work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section class="hero" id="top">
+      <!--
+        HEADSHOT PHOTO
+        To add your photo, save it as "photo.jpg" in the same folder as this file.
+        It will appear here automatically. A square photo works best.
+        Until then, your initials are shown instead.
+      -->
+      <div class="photo-frame">
+        <img src="photo.jpg" alt="James Fretton" width="168" height="168"
+             onerror="this.remove(); document.getElementById('initials').hidden = false;">
+        <span class="photo-initials" id="initials" aria-hidden="true" hidden>JF</span>
+      </div>
+
+      <h1>James Fretton</h1>
+      <p class="role">Founder, Crest · Supply chain and transformation consultant</p>
+      <p class="tagline">Helping organisations change how they work, and making that change stick.</p>
+      <a class="button" href="https://www.linkedin.com/in/jamesfretton-762844" target="_blank" rel="noopener noreferrer">Connect on LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a>
+    </section>
+
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About me</h2>
+      <p>I spent 24 years at British American Tobacco leading change across supply chains, product launches and the way teams work together, in markets across Europe, Africa, the Middle East and globally. I've redesigned how organisations are structured, brought Marketing, Sales, Operations, Procurement and Finance onto the same page, and delivered savings worth tens of millions of pounds.</p>
+      <p>I now bring that experience to consulting through Crest, my own consultancy. I help organisations find the real cause of their problems, design practical solutions, and build the skills their people need to carry the change forward.</p>
+    </section>
+
+    <section id="help" class="wide" aria-labelledby="help-title">
+      <h2 id="help-title">How I can help</h2>
+      <ul class="cards">
+        <li class="card">
+          <h3>Supply chain strategy</h3>
+          <p>Planning, stock levels, distribution networks and S&amp;OP (aligning sales forecasts with what the business can supply).</p>
+        </li>
+        <li class="card">
+          <h3>Operating model redesign</h3>
+          <p>Clearer roles, governance and ways of working across teams and countries.</p>
+        </li>
+        <li class="card">
+          <h3>Faster product launches</h3>
+          <p>Getting new products from idea to shelf with less delay and less waste.</p>
+        </li>
+        <li class="card">
+          <h3>Cost and procurement</h3>
+          <p>Finding savings in what the business buys and how it moves goods.</p>
+        </li>
+        <li class="card">
+          <h3>Leading change</h3>
+          <p>Coaching-led leadership that helps new habits take root.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="results" aria-labelledby="results-title">
+      <h2 id="results-title">Results at a glance</h2>
+      <ul class="results">
+        <li><span class="stat">£20m</span> saved on £190m of procurement spend</li>
+        <li><span class="stat">£7m</span> in logistics savings through a network redesign</li>
+        <li><span class="stat word">Award-winning</span> planning and customer service transformation across Africa and the Middle East</li>
+        <li><span class="stat">20+</span> years leading change across multiple markets</li>
+      </ul>
+    </section>
+
+    <section id="career" aria-labelledby="career-title">
+      <h2 id="career-title">My career</h2>
+      <ol class="timeline">
+        <li><span class="when">2019–2025</span><span class="what">Group New Product Delivery Manager, British American Tobacco</span></li>
+        <li><span class="when">2018–2019</span><span class="what">Head of New Product Innovation Deployment, Europe &amp; North Africa</span></li>
+        <li><span class="when">2016–2017</span><span class="what">Regional Head of New Product Introduction, Western Europe</span></li>
+        <li><span class="when">2012–2016</span><span class="what">Head of Service, then Head of Strategic Supply Planning, EEMEA Supply Chain</span></li>
+        <li><span class="when">2004–2012</span><span class="what">Procurement and supply chain programme leadership, Africa &amp; Middle East</span></li>
+        <li><span class="when">Earlier</span><span class="what">IT and systems roles at BAT, Colonial Bank Sydney and SEMA Group</span></li>
+        <li><span class="when">Education</span><span class="what">BSc Strategic Systems Management, Bournemouth University</span></li>
+      </ol>
+    </section>
+
+    <section id="beyond" aria-labelledby="beyond-title">
+      <h2 id="beyond-title">Beyond work</h2>
+      <p>I'm currently training as a professional coach (ICF Level 1, Full Circle). I volunteer as a Tree Champion for the Woodland Trust, bringing free trees to schools and community groups across Hampshire, and help with conservation work for the Hampshire &amp; Isle of Wight Wildlife Trust.</p>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Get in touch</h2>
+      <p>The best way to reach me is on LinkedIn: <a href="https://www.linkedin.com/in/jamesfretton-762844" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/jamesfretton-762844<span class="visually-hidden"> (opens in a new tab)</span></a></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Crest · James Fretton</p>
+  </footer>
+
+  <style>
+    .visually-hidden {
+      position: absolute !important;
+      width: 1px; height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+    .contact a { overflow-wrap: anywhere; }
+  </style>
+</body>
+</html>
